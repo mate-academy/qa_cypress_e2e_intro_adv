@@ -10,6 +10,6 @@ describe('Sign Up page', () => {
     cy.get('[placeholder = "Email"]').type(user.email)
     cy.get('[placeholder = "Password"]').type(user.password)
     cy.contains('button', 'Sign in').click()
-    cy.contains('.nav', user.username)
+    cy.get('.nav').should('contain', user.username)
   });
 });
