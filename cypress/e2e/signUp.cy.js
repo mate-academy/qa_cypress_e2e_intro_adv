@@ -11,7 +11,7 @@ cy.get('[placeholder="Email"]').type(email)
 cy.get('[placeholder="Password"]').type(password)
 cy.get('.btn').click()
 cy.get(':nth-child(4) > .nav-link').should('contain', username)
-    
+  
   });
 });
 
