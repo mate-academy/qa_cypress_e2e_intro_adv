@@ -18,7 +18,6 @@ describe('Sign Up page', () => {
     cy.get('[type="submit"]').click();
 
     //Assert your username appeared in site navigation (header) menu.
-    cy.get(':nth-child(4) > .nav-link').should('contain.text',username);
-
+    cy.get(':nth-child(4) > .nav-link').should('contain.text', username);
   });
 });
