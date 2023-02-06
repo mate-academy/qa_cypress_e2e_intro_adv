@@ -22,7 +22,7 @@ describe('Sign Up page', () => {
       .type(password);
 
     cy.get('.btn')
-      .should('contain.text', 'Sign in')
+      .should('contain.text', 'Sign up')
       .click();
 
     cy.get(':nth-child(4) > .nav-link')
