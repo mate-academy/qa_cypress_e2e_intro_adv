@@ -30,5 +30,4 @@ describe('Sign Up page', () => {
     cy.contains('.nav-link', `${username}`)
       .should('exist');
   });
-
 });
