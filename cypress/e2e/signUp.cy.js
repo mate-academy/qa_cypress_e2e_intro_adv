@@ -8,8 +8,6 @@ describe('Sign Up page', () => {
 
     cy.visit('/' + '/#/register');
 
-    // cy.get('[href="#register"]').click();
-
     cy.findPlaceholder('Username').type(username);
 
     cy.findPlaceholder('Email').type(email);
