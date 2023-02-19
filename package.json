@@ -1,0 +1,22 @@
+{
+  "name": "qa_cypress_e2e_intro_adv",
+  "version": "1.0.0",
+  "description": "## Workflow",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viiktorrr/qa_cypress_e2e_intro_adv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Viiktorrr/qa_cypress_e2e_intro_adv/issues"
+  },
+  "homepage": "https://github.com/Viiktorrr/qa_cypress_e2e_intro_adv#readme",
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
+}
