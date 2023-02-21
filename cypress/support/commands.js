@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('findByPlaceholder', (placeholder) => {
+  cy.get(`[placeholder="${placeholder}"]`);
+});
+
+Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
+  originalFn('/#' + url, options);
+});
+
+Cypress.Commands.add('assertPageURL', (url) => {
+  cy.hash().should('include', '#' + url);
+});
+
+Cypress.Commands.add('assertAuthorized', (username) => {
+  cy.get('.navbar-nav').should('contain.text', username);
+});
