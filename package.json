@@ -1,0 +1,26 @@
+{
+  "name": "qa_cypress_e2e_intro_adv",
+  "version": "1.0.0",
+  "description": "1. Fork the repo.\r 1. Clone **your** forked repository.\r 1. Create a new branch `git checkout -b testing`.\r 1. Resolve tasks in the `cypress`/`e2e`/`signUp.cy.js`.\r 1. Create a pull request.\r 1. Do not forget to click on `Re-request review` if you submit the homework after previous review.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhorLeha/qa_cypress_e2e_intro_adv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IhorLeha/qa_cypress_e2e_intro_adv/issues"
+  },
+  "homepage": "https://github.com/IhorLeha/qa_cypress_e2e_intro_adv#readme",
+  "devDependencies": {
+    "cypress": "^12.10.0"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
+}
