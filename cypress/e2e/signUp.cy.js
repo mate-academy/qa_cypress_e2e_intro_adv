@@ -5,9 +5,12 @@ describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const { username, email, password } = generateUser()
 
-    cy.visit('https://react-redux.realworld.io');
+    cy.visit({url:'https://react-redux.realworld.io', method:'GET'});
     cy.contains('Sign up')
       .click();
+
+    cy.get('h1')
+      .should('contain.text', 'Sign Up')
 
     cy.get(':nth-child(1) > .form-control')
       .type(username)
