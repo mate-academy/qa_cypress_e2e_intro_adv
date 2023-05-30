@@ -8,13 +8,13 @@ describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const {username,  email, password} = generateUser();
 
-    cy.get(':nth-child(1) > .form-control')
+    cy.get('[placeholder="Username"]')
       .type(username);
 
-    cy.get(':nth-child(2) > .form-control')
+    cy.get('[placeholder="Email"]')
       .type(email);
 
-    cy.get(':nth-child(3) > .form-control')
+    cy.get('[placeholder="Password"]')
       .type(password);
 
     cy.contains('.btn', 'Sign in')
