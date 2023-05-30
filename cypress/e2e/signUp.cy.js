@@ -7,22 +7,22 @@ describe('Sign Up page', () => {
     const user = generateUser();
     
   
-    cy.get(':nth-child(3) > .nav-link')
-    .click ();
+    cy.contains('.nav-link', 'Sign up')
+     .click ();
     cy.contains('h1', 'Sign Up')
-    .should('be.visible');
+     .should('be.visible');
     cy.url()
-    .should('include', 'register');
-    cy.get(':nth-child(1) > .form-control')  
-    .type (user.username);
-    cy.get(':nth-child(2) > .form-control')
-    .type (user.email);
-    cy.get(':nth-child(3) > .form-control')
-    .type(user.password);
+     .should('include', 'register');
+    cy.get('[placeholder = "Username"]')  
+     .type (user.username);
+    cy.get('[placeholder = "Email"]')
+     .type (user.email);
+    cy.get('[placeholder = "Password"]')
+     .type(user.password);
     cy.get('.btn')
-    .click();
-    cy.get(':nth-child(4) > .nav-link')
-    .should('contain',user.username)
+     .click();
+    cy.contains('.nav-link', user.username)
+     .should('be.visible')
   });
 });
 
