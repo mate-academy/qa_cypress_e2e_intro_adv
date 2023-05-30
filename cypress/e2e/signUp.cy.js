@@ -11,11 +11,11 @@ describe('Sign Up page', () => {
     cy.contains('a', 'Sign up')
       .click();
 
-    cy.get(':nth-child(1) > .form-control')
+    cy.get('input[placeholder="Username"]')
       .type(username)
-    cy.get(':nth-child(2) > .form-control')
+    cy.get('input[placeholder="Email"]')
       .type(email)
-    cy.get(':nth-child(3) > .form-control')
+    cy.get('input[placeholder="Password"]')
       .type(password)
     cy.contains('.btn', 'Sign in')
       .click();
