@@ -12,13 +12,13 @@ describe('Sign Up page', () => {
     cy.get('h1')
       .should('contain.text', 'Sign Up')
 
-    cy.get(':nth-child(1) > .form-control')
+    cy.get('[placeholder="Username"]')
       .type(username)
     
-    cy.get(':nth-child(2) > .form-control')
+    cy.get('[placeholder="Email"]')
       .type(email)
 
-    cy.get(':nth-child(3) > .form-control')
+    cy.get('[placeholder="Password"]')
       .type(password)
 
     cy.contains('.btn', 'Sign in')
