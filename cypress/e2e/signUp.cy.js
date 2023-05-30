@@ -9,13 +9,13 @@ describe('Sign Up page', () => {
 
     cy.visit(baseUrl + '/#/register');
 
-    cy.get(':nth-child(1) > .form-control')
+    cy.get('[placeholder = "Username"]')
       .type(user.username);
 
-    cy.get(':nth-child(2) > .form-control')
+    cy.get('[placeholder = "Email"]')
       .type(user.email);
 
-    cy.get(':nth-child(3) > .form-control')
+    cy.get('[placeholder = "Password"]')
       .type(user.password);
 
     cy.get('.btn')
