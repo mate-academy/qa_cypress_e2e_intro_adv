@@ -8,12 +8,12 @@ describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const {username, email, password} = generateUser();
 
-    cy.get(':nth-child(1) > .form-control').type(username);
-    cy.get(':nth-child(2) > .form-control').type(email);
-    cy.get(':nth-child(3) > .form-control').type(password);
+    cy.get('[placeholder="Username"]').type(username);
+    cy.get('[placeholder="Email"]').type(email);
+    cy.get('[placeholder="Password"]').type(password);
 
-    cy.contains('.btn', 'Sign in').click();
+    cy.contains('.btn', 'Sign up').click();
 
-    cy.get(':nth-child(4) > .nav-link').should('contain', username);
+    cy.contains('.nav-link', username).should('be.visisble');
   });
 });
