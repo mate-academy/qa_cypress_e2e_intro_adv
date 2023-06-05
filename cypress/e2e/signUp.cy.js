@@ -8,16 +8,20 @@ describe('Sign Up page', () => {
   });
 
   it('should provide an ability to Sign up', () => {
-    const {email, username, password} = generateUser();
-      cy.get(':nth-child(1) > .form-control')
+    const { email, username, password } = generateUser();
+    cy.get(':nth-child(1) > .form-control')
       .type(username);
-      cy.get(':nth-child(2) > .form-control')
+    cy.get(':nth-child(2) > .form-control')
       .type(email);
-      cy.get(':nth-child(3) > .form-control')
+    cy.get(':nth-child(3) > .form-control')
       .type(password);
-      cy.get(':nth-child(4) > .nav-link')
+    cy.get(':nth-child(4) > .nav-link')
       .should('contain', username);
-      cy.contains('.nav-link', 'Sign up')
+    cy.contains('.nav-link', 'Sign up')
       .click();
+    cy.contains('.btn', 'Sign in')
+      .click();
+    cy.get('.nav-link')
+      .should('contain', username);
   });
 });
