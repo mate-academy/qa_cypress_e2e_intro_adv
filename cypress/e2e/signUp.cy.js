@@ -10,7 +10,7 @@ describe('Sign Up page', () => {
     cy.getByPlaceholder('Username').type(user.username);
     cy.getByPlaceholder('Email').type(user.email);
     cy.getByPlaceholder('Password').type(user.password);
-    cy.get('.btn').click();
+    cy.get('.btn').should('contain.text', 'Sign in').click();
     cy.get('.nav-link').should('contain.text', user.username);
   });
 });
