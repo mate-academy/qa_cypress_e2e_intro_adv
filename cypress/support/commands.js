@@ -24,11 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+const faker = require('faker');
+
 Cypress.Commands.add('findByPlaceholder', (placeholder) => {
   cy.get(`[placeholder="${placeholder}"]`);
 });
-
-const faker = require('faker');
 
 function generateUser() {
   const random = Math.random().toString().slice(2, 6);

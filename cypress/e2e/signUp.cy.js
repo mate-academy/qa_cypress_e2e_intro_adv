@@ -14,7 +14,7 @@ describe('Sign Up page', () => {
     cy.findByPlaceholder('Email').type(email);
     cy.findByPlaceholder('Password').type(password);
 
-    cy.get('.btn').should('contain.text', 'Sign in').click();
+    cy.get('.btn').should('contain.text', 'Sign Up').click();
 
     cy.get(':nth-child(4) > .nav-link').should('contain.text', username);
   });
