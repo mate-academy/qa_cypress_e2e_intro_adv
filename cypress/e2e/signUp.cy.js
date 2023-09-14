@@ -19,7 +19,7 @@ describe('Sign Up page', () => {
     cy.get('[placeholder=Password]')
       .type(password);
 
-    cy.get('.btn').contains('Sign in').click();
+    cy.get('.btn').click();
 
     cy.get(':nth-child(4) > .nav-link')
       .should('contain.text', username);
