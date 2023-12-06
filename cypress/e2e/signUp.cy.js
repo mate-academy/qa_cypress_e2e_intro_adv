@@ -4,7 +4,7 @@ describe('Sign Up page', () => {
   before(() => {
     cy.visit('https://react-redux.realworld.io');
   });
-  it('should provide an ability to register new account', () => {
+  it('should provide an ability to register new account ', () => {
     const user = generateUser();
     cy.get('.nav-link').contains('Sign up').click();
     cy.get('input[placeholder=Username]').type(user.username);
