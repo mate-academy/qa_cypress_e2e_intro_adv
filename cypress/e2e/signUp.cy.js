@@ -16,6 +16,6 @@ describe('Sign Up page', () => {
 
     cy.get('.btn, Sign in').click();
 
-    cy.get('.nav-link').should('contain', userName);
+    cy.contains('[class="nav-link"]', userName).should('contain', userName);
   });
 });
