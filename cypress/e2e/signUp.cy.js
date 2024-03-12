@@ -12,19 +12,19 @@ describe('Sign Up page', () => {
 
     cy.log(user.username);
 
-    cy.get(':nth-child(1) > .form-control')
+    cy.get('input[placeholder="Username"]')
       .type(user.username);
 
-    cy.get(':nth-child(2) > .form-control')
+    cy.get('input[placeholder="Email"]')
       .type(user.email);
 
-    cy.get(':nth-child(3) > .form-control')
+    cy.get('input[placeholder="Password"]')
       .type(user.password);
 
-    cy.get('.btn')
+    cy.get('button[type="submit"]')
       .click();
 
-    cy.get('.navbar :nth-child(4) > .nav-link')
+    cy.get('.navbar .nav-link').eq(3)
       .should('contain.text', user.username);
   });
 });
