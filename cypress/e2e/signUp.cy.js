@@ -10,8 +10,6 @@ describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const user = generateUser();
 
-    cy.log(user.username);
-
     cy.get('input[placeholder="Username"]')
       .type(user.username);
 
