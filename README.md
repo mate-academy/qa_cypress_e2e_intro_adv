@@ -29,8 +29,8 @@ To use `faker` in your tests, go to `support`/`generate.js` file and write the n
 const faker = require('faker');
 
 function generateUser() {
-  const random = Math.random().toString().slice(2, 6);
-  const username = faker.internet.userName() + '_' + random;
+  const randomNumber = Math.random().toString().slice(2, 6);
+  const username = faker.internet.userName() + '_' + randomNumber;
   const email = `${username}@mail.com`;
   const password = '12345Qwert!';
 
