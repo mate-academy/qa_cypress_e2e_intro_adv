@@ -22,11 +22,10 @@ App for testing: `https://react-redux.realworld.io`
 1. Click on [Sign up] button.
 1. Assert your username appeared in site navigation (header) menu.
 
-To install `faker` plugin, run the command: `npm install faker@5.5.3`.
 To use `faker` in your tests, go to `support`/`generate.js` file and write the next code:
 
 ```js
-const faker = require('faker');
+import { faker } from '@faker-js/faker';
 
 function generateUser() {
   const randomNumber = Math.random().toString().slice(2, 6);
@@ -43,7 +42,7 @@ module.exports = { generateUser };
 Now, you can generate a new user in your tests:
 
 ```js
-const { generateUser } = require('../support/generate');
+import { generateUser } from '../support/generate';
 
 describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
