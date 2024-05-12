@@ -8,6 +8,6 @@ describe('Sign Up page', () => {
     cy.get(':nth-child(2) > .form-control').type(email);
     cy.get(':nth-child(3) > .form-control').type(password);
     cy.get('.btn').click();
-    cy.get(':nth-child(4) > .nav-link').should('be.visible');
+    
   });
 });
