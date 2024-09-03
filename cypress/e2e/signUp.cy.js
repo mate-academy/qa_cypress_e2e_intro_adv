@@ -1,4 +1,3 @@
-
 /// <reference types="cypress" />
 
 import { generateUser } from '../support/generate';

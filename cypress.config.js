@@ -1,4 +1,3 @@
-
 module.exports = {
   e2e: {
     baseUrl: 'https://react-redux.realworld.io',
