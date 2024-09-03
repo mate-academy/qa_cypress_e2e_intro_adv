@@ -25,7 +25,6 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import { faker } from '@faker-js/faker';
 
-
 Cypress.Commands.add('generateUser', () => {
   const randomNumber = Math.random().toString().slice(2, 6);
   const username = faker.internet.userName() + '_' + randomNumber;

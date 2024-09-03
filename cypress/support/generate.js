@@ -5,6 +5,6 @@ export function generateUser() {
   const username = faker.internet.userName() + '_' + randomNumber;
   const email = `${username}@mail.com`;
   const password = '12345Qwert!';
-
+  
   return { email, password, username };
 }

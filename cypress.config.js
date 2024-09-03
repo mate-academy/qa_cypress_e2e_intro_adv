@@ -6,5 +6,3 @@ module.exports = {
     defaultCommandTimeout: 10000,
   },
 };
-
-
