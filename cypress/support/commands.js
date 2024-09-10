@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
+  originalFn('/#' + url, options);
+});
+
+Cypress.Commands.add('getByPlaceholder', (placeholder) => {
+  cy.get(`[placeholder=${placeholder}]`);
+});
