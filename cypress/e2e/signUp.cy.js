@@ -8,7 +8,7 @@ describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const { email, username, password } = generateUser();
 
-    cy.visit('https://react-redux.realworld.io/#/register?_k=spysa9');
+    cy.visit('/#/register?_k=spysa9');
 
     cy.get('[placeholder=Username]')
       .type(username);
@@ -19,10 +19,9 @@ describe('Sign Up page', () => {
     cy.get('[placeholder=Password]')
       .type(password);
 
-    cy.get('button[type=submit]')
-      .should('exist').click();
+    cy.get('button[type=submit]').click();
 
-    cy.url().should('not.contain', '/register');
+    cy.url().should('contain', '/#/?_k=c1q9kl');
 
     cy.get('a.nav-link').contains(username).should('exist');
   });
