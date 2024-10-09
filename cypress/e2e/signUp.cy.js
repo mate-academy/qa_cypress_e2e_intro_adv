@@ -11,6 +11,7 @@ describe('Sign Up page', () => {
     cy.get('input[type="email"]').type(user.email);
     cy.get('input[type="password"]').type(user.password);
     cy.get('button[type="submit"]').click();
+    cy.url().should('include', '/');
     cy.get('.nav-link').should('contain', user.username.toLowerCase());
   });
 });
