@@ -4,13 +4,12 @@ describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const user = generateUser();
 
-    cy.visit('https://conduit.mate.academy/user/register');
-
-    cy.get(':nth-child(1) > .form-control').type(user.username);
-    cy.get(':nth-child(2) > .form-control').type(user.email);
-    cy.get(':nth-child(3) > .form-control').type(user.password);
-
-    cy.get('.btn').click();
-    cy.get(':nth-child(4) > .nav-link').should('contain', user.username.toLowerCase());
+    cy.visit('https://react-redux.realworld.io');
+    cy.contains('Sign up').click();
+    cy.get('input[placeholder="Username"]').type(user.username);
+    cy.get('input[placeholder="Email"]').type(user.email);
+    cy.get('input[placeholder="Password"]').type(user.password);
+    cy.get('button[type="submit"]').click();
+    cy.get('.navbar').should('contain', user.username);
   });
 });
