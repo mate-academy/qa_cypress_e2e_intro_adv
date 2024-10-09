@@ -7,11 +7,10 @@ describe('Sign Up page', () => {
     const user = generateUser();
 
     cy.visit('user/register');
-    cy.get(':nth-child(1) > .form-control').type(user.username);
-    cy.get(':nth-child(2) > .form-control').type(user.email);
-    cy.get(':nth-child(3) > .form-control').type(user.password);
-    cy.get('.btn').click();
-    cy.get(':nth-child(4) > .nav-link');
-    cy.should('contain', user.username.toLowerCase());
+    cy.get('input[placeholder="Username"]').type(user.username);
+    cy.get('input[type="email"]').type(user.email);
+    cy.get('input[type="password"]').type(user.password);
+    cy.get('button[type="submit"]').click();
+    cy.get('.nav-link').should('contain', user.username.toLowerCase());
   });
 });
