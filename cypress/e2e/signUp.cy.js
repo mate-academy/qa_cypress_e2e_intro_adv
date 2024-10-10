@@ -1,17 +1,19 @@
+/// <reference types="cypress" />
+
 import { generateUser } from '../support/generate';
 
 describe('Sign Up page', () => {
   it('should provide an ability to register new account', () => {
     const user = generateUser();
-    cy.visit('/#/register');
+    cy.visit('/register');
 
-    cy.get('[placeholder=Username]')
+    cy.findByPlaceholder('Username')
       .type(user.username);
 
-    cy.get('[placeholder=Email]')
+    cy.findByPlaceholder('Email')
       .type(user.email);
 
-    cy.get('[placeholder=Password]')
+    cy.findByPlaceholder('Password')
       .type(user.password);
 
     cy.get('button[type="submit"]').click();
